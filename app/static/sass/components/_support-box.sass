@@ -1,0 +1,25 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+#support-team
+    bottom: 5%
+    right: 5%
+    box-shadow: 0px 0px 10px $quaternary-color-x
+    transition: all .8s ease-in
+
+    @include tablet
+        box-shadow: 0px 0px 20px $quaternary-color-x
+
+    @include desktop
+        cursor: pointer
+        box-shadow: 0px 0px 30px $quaternary-color-x
+
+    i
+        font-size: 1.5em
+
+        @include tablet
+            font-size: 2em
+
+    p
+        @include tablet
+            font-size: 1.3em

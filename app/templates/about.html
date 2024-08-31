@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Borges Company - About</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/about.min.css') }}">
+    </head>
+    <body>
+        <header id="main-header" class="bg-color-a w-100 d-flex align-items-center justify-content-between px-md-3 pb-md-3 px-lg-3 py-lg-2">
+            <a target="_self" href="{{ url_for('home') }}" id="header-brand" class="d-flex align-items-center justify-content-center gap-2 gap-md-3">
+                <img src="{{ url_for('static', filename='images/Borges Company Logo.png') }}" alt="Logotipo da agência de marketing digital Borges Company" id="logo" class="rounded-3">
+                <p id="header-brand-legend" class="m-0">
+                    <strong class="color-d text-uppercase d-block">Borges</strong>
+                    <span class="color-b fw-bold">Company</span>
+                </p>
+            </a>
+            <button type="button" id="open-menu-btn" class="btn-icon d-lg-none">
+                <i class="bi bi-list color-e"></i>
+            </button>
+            <div id="menu-overlay" class="bg-color-ab position-absolute w-100 h-100 text-center closed">
+                <button type="button" id="close-menu-btn" class="btn-icon color-b w-100 text-end p-4 pt-md-5 pe-md-5 d-lg-none"><i class="bi bi-x-lg"></i></button>
+                <menu type="toolbar" id="main-menu">
+                    <p class="text-uppercase color-e mb-3 fw-bold d-lg-none">Menu</p>
+                    <nav class="d-flex flex-column gap-3 flex-lg-row gap-lg-2 justify-content-lg-evenly">
+                        <a href="{{ url_for('home') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Home</a>
+                        <a href="{{ url_for('solutions') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Solutions</a>
+                        <a href="{{ url_for('projects') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Projects</a>
+                        <a href="{{ url_for('about') }}" target="_self" class="active">About</a>
+                        <a href="{{ url_for('support') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Support</a>
+                    </nav>
+                </menu>
+            </div>
+        </header>
+        <main>
+            <div id="intro-area">
+                <div id="intro-img" class="position-relative">
+                    <img src="{{ url_for('static', filename='images/solutions.jpg') }}" alt="Imagem principal" class="w-100 d-lg-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" class="position-absolute bottom-0 start-0 d-md-none">
+                        <path fill="#f7f5f8" fill-opacity="1" d="M0,256L80,229.3C160,203,320,149,480,128C640,107,800,117,960,128C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                    </svg>
+                </div>
+                <div id="intro-body" class="p-3 py-lg-0 justify-content-lg-start">
+                    <h1 class="mb-3 fw-semibold color-c text-md-center my-md-3">Be impressed by our <strong class="color-e">success story!</strong></h1>
+                    <p class="description mb-lg-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, blanditiis aliquid omnis delectus fugit necessitatibus expedita amet quidem, minima nesciunt corrupti hic vel reprehenderit ullam iusto aliquam. Fugit, voluptas ab.</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, blanditiis aliquid omnis delectus fugit necessitatibus expedita amet quidem, minima nesciunt corrupti.</p>                    
+                </div>
+            </div>
+            <div id="cards-area" class="p-3">
+                <h2 class="subtitle mb-5 my-md-5">Meet some of our young directors</h2>
+                <div id="cards-container" class="d-lg-flex flex-lg-wrap justify-content-lg-between">
+                    <div class="card">
+                        <div class="card-img-top">
+                            <img src="{{ url_for('static', filename='images/consultor de vendas.jpg') }}" alt="Consultoria de vendas">
+                        </div>
+                        <div class="card-body p-3">
+                            <h3>Joel Gomes - Sales consultant</h3>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, distinctio sunt, voluptas maxime corrupti ex explicabo enim esse vel, incidunt quidem atque doloribus! Harum consequatur voluptatum excepturi nisi recusandae dolorem!</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-top">
+                            <img src="{{ url_for('static', filename='images/dev.jpg') }}" alt="Consultoria de vendas">
+                        </div>
+                        <div class="card-body p-3">
+                            <h3>Lukeny Bernardo - IT Director</h3>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, distinctio sunt, voluptas maxime corrupti ex explicabo enim esse vel, incidunt quidem atque doloribus! Harum consequatur voluptatum excepturi nisi recusandae dolorem!</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-top">
+                            <img src="{{ url_for('static', filename='images/designer (1).jpg') }}" alt="Consultoria de vendas">
+                        </div>
+                        <div class="card-body p-3">
+                            <h3>Maria Teca - Design Director</h3>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, distinctio sunt, voluptas maxime corrupti ex explicabo enim esse vel, incidunt quidem atque doloribus! Harum consequatur voluptatum excepturi nisi recusandae dolorem!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="CEO-and-founder" class="p-3 d-md-flex justify-content-md-between align-items-md-center gap-md-4 mb-md-5 p-lg-0 justify-content-xl-start pe-lg-3">
+                <img src="{{ url_for('static', filename='images/BORGES CEO.jpg') }}" alt="Founder and CEO" class="w-100 mb-3 rounded-4 mb-md-0" id="CEO-and-founder-img">
+                <div class="description-area d-md-flex flex-md-column">
+                    <h2 class="subtitle" id="CEO-and-founder-subtitle">Manuel Tchicuata - <strong>CEO & Founder</strong></h2>
+                    <p class="description" id="CEO-and-founder-description-p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium cum animi deserunt nesciunt tempora eaque ad in, fuga officia aperiam soluta consectetur quas ipsum ut laborum impedit. Doloribus, itaque distinctio.</p>
+                    <p class="description" id="CEO-and-founder-description-p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iure commodi, deserunt labore, voluptas quod similique eligendi incidunt sapiente, magni velit? Vel, dolores? Ipsa aperiam placeat repudiandae excepturi officiis ea?</p>
+                    <div id="social" class="d-flex justify-content-between mt-3 mt-md-0 description-container">
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                            <span>Manuel Tchicuata</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                            <span>@Manuel_Tchicuatta</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="p-3">
+            <div id="footer-options" class="d-md-flex justify-content-md-between px-md-2 align-items-md-start px-lg-0 justify-content-lg-around">
+                <div id="useful-links" class="mb-3 d-md-flex flex-md-column align-items-md-start">
+                    <h3 class="mb-2 text-capitalize color-e">Useful links</h3>
+                    <nav id="useful-links-nav" class="d-flex flex-column gap-2 align-items-md-start">
+                        <a href="#">Terms of use</a>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Cookies policy</a>
+                        <a href="#">Licenses</a>
+                    </nav>
+                </div>
+                <div id="support-links" class="mb-3 d-md-flex flex-md-column align-items-md-start">
+                    <h3 class="mb-2 text-capitalize color-e">Support</h3>
+                    <nav id="support-links-nav" class="d-flex flex-column gap-2 align-items-md-start">
+                        <a href="#">
+                            <i class="bi bi-whatsapp me-1"></i>
+                            <span>555−0100</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-telegram me-1"></i>
+                            <span>123−4567</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-envelope-at-fill me-1"></i>
+                            <span>support@borgescompany.com</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-telephone-fill me-1"></i>
+                            <span>(212)555−1234</span>
+                        </a>
+                    </nav>
+                </div>
+                <div id="social-links" class="mb-3 d-md-flex flex-md-column align-items-md-start">
+                    <h3 class="mb-2 text-capitalize color-e">Social</h3>
+                    <nav id="social-links-nav" class="d-flex justify-content-evenly gap-2 align-items-md-start">
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div id="footer-brand" class="mt-5 mt-md-3">
+                <p class="mb-0">Copyright &copy; <a href="#" class="fst-italic">Manassés Ndombele</a></p>
+                <p>Freelancer Developer</p>
+            </div>
+        </footer>
+        <div id="support-team" class="position-fixed bg-color-cb rounded-5 d-none gap-3 align-items-center px-3 py-1">
+            <i class="bi bi-headset color-e"></i>
+            <p class="mb-0 color-a text-capitalize fw-semibold">Can we help you?</p>
+        </div>
+        <script src="{{ url_for('static', filename='js/base.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/about.min.js') }}"></script>
+    </body>
+</html>

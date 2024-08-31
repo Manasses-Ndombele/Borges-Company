@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Borges Company - Home</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.min.css') }}">
+    </head>
+    <body>
+        <header id="main-header" class="bg-color-a w-100 d-flex align-items-center justify-content-between px-md-3 pb-md-3 px-lg-3 py-lg-2">
+            <a target="_self" href="{{ url_for('home') }}" id="header-brand" class="d-flex align-items-center justify-content-center gap-2 gap-md-3">
+                <img src="{{ url_for('static', filename='images/Borges Company Logo.png') }}" alt="Logotipo da agência de marketing digital Borges Company" id="logo" class="rounded-3">
+                <p id="header-brand-legend" class="m-0">
+                    <strong class="color-d text-uppercase d-block">Borges</strong>
+                    <span class="color-b fw-bold">Company</span>
+                </p>
+            </a>
+            <button type="button" id="open-menu-btn" class="btn-icon d-lg-none">
+                <i class="bi bi-list color-e"></i>
+            </button>
+            <div id="menu-overlay" class="bg-color-ab position-absolute w-100 h-100 text-center closed">
+                <button type="button" id="close-menu-btn" class="btn-icon color-b w-100 text-end p-4 pt-md-5 pe-md-5 d-lg-none"><i class="bi bi-x-lg"></i></button>
+                <menu type="toolbar" id="main-menu">
+                    <p class="text-uppercase color-e mb-3 fw-bold d-lg-none">Menu</p>
+                    <nav class="d-flex flex-column gap-3 flex-lg-row gap-lg-2 justify-content-lg-evenly">
+                        <a href="{{ url_for('home') }}" target="_self" class="active">Home</a>
+                        <a href="{{ url_for('solutions') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Solutions</a>
+                        <a href="{{ url_for('projects') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Projects</a>
+                        <a href="{{ url_for('about') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">About</a>
+                        <a href="{{ url_for('support') }}" target="_self" class="d-lg-flex flex-lg-column align-items-lg-center">Support</a>
+                    </nav>
+                </menu>
+            </div>
+        </header>
+        <main>
+            <div id="intro-area">
+                <div id="intro-img" class="position-relative">
+                    <img src="{{ url_for('static', filename='images/bg-main-home.jpg') }}" alt="Imagem principal" class="w-100 d-lg-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" class="position-absolute bottom-0 start-0 d-md-none">
+                        <path fill="#f7f5f8" fill-opacity="1" d="M0,256L80,229.3C160,203,320,149,480,128C640,107,800,117,960,128C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                    </svg>
+                </div>
+                <div id="intro-body" class="p-3">
+                    <h1 class="mb-3 fw-semibold color-c text-md-center my-md-3">We are the <strong class="color-e">best solution</strong> for your business!</h1>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, blanditiis aliquid omnis delectus fugit necessitatibus expedita amet quidem, minima nesciunt corrupti hic vel reprehenderit ullam iusto aliquam. Fugit, voluptas ab.</p>
+                    <div id="intro-overlay-actions" class="w-100 mt-3 mt-md-4 d-md-flex justify-content-md-around align-items-md-end gap-md-5 mt-xl-0">
+                        <button type="button" class="btn-system primary btn-large">Ask for budget</button>
+                        <button type="button" class="btn-system secondary btn-large">Get in touch</button>
+                    </div>
+                </div>
+            </div>
+            <div id="about-us-area" class="p-3 mt-md-5 px-md-5 d-lg-flex align-items-lg-center flex-lg-column description-container opacity-25">
+                <h2  class="subtitle">Who we are?</h2>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis explicabo esse distinctio voluptas facilis perspiciatis totam, dicta aliquid, nemo, ducimus consectetur cupiditate! Fugiat laudantium nemo iure, totam velit vel.</p>
+            </div>
+            <div id="results-area" class="mt-md-5">
+                <h2 class="subtitle p-3 pb-md-0 mb-md-0">Our results</h2>
+                <div id="results-count-area">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+                        <path fill="#ff7e23" fill-opacity="1" d="M0,32L60,69.3C120,107,240,181,360,218.7C480,256,600,256,720,218.7C840,181,960,107,1080,90.7C1200,75,1320,117,1380,138.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                    </svg>
+                    <div id="results-count" class="p-3 d-flex flex-wrap justify-content-between bg-color-cb px-md-4 py-md-0 mb-md-0 px-lg-5">
+                        <p class="color-a mb-lg-0">
+                            <strong>0</strong>
+                            <span>projects sold</span>
+                        </p>
+                        <p class="color-a mb-lg-0">
+                            <strong>0</strong>
+                            <span>years in the market</span>
+                        </p>
+                        <p class="color-a mb-lg-0">
+                            <strong>0</strong>
+                            <span>satisfied customers</span>
+                        </p>
+                        <p class="color-a mb-lg-0">
+                            <strong>0</strong>
+                            <span>awards</span>
+                        </p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
+                        <path fill="#ff7e23" fill-opacity="1" d="M0,32L60,69.3C120,107,240,181,360,218.7C480,256,600,256,720,218.7C840,181,960,107,1080,90.7C1200,75,1320,117,1380,138.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div id="services" class="p-3 mb-md-5 mb-lg-5 description-container">
+                <h2 class="subtitle">Benefits of our services</h2>
+                <div id="bonus-area" class="mt-md-5 mt-lg-4 mt-xl-5">
+                    <div class="bonus">
+                        <i class="bi bi-amd"></i>
+                        <h3>Innovation</h3>
+                    </div>
+                    <div class="bonus">
+                        <i class="bi bi-shield-fill-check"></i>
+                        <h3>Speed</h3>
+                    </div>
+                    <div class="bonus">
+                        <i class="bi bi-person-fill-gear"></i>
+                        <h3>Professionalism</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="history-area" class="p-3 px-md-5 d-lg-flex align-items-lg-start gap-lg-3 px-lg-0 py-xl-0 flex-xl-row-reverse align-items-xl-start">
+                <img src="{{ url_for('static', filename='images/solutions.jpg') }}" alt="SOLUÇÕES" class="w-100 mb-3 rounded-4 mb-lg-0" id="history-area-img">
+                <div id="history-container" class="pt-xl-4 px-xl-4">
+                    <div id="history">
+                        <h2 class="subtitle mb-3" id="history-container-subtitle">Our story</h2>
+                        <p class="description" id="history-container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At alias natus sapiente voluptatum et laudantium officiis earum in quia eos! Non fugiat optio dolorum voluptates vitae! Quis ducimus consectetur incidunt?</p>
+                    </div>
+                    <div id="history-actions" class="d-md-flex justify-content-md-center mt-md-4 justify-content-lg-start">
+                        <button type="button" class="btn-system secondary btn-large">Know more</button>
+                    </div>
+                </div>
+            </div>
+            <div id="support-area" class="p-3 mt-lg-5 d-flex flex-column align-items-md-center">
+                <h2 class="subtitle mb-3">Contact us</h2>
+                <form class="px-lg-4 px-xl-0 d-flex flex-column justify-content-md-center">
+                    <div id="form-field-area" class="d-flex flex-column align-items-md-center">
+                        <label class="form-label color-d mb-2" for="first-name-field">First name</label>
+                        <input type="text" id="first-name-field" placeholder="Enter your first name" class="form-control bg-color-a color-d p-2 rounded-3 mb-2 mb-md-4" required>
+                        <label class="form-label color-d mb-2" for="last-name-field">Surname</label>
+                        <input type="text" id="last-name-field" placeholder="Enter your last name" class="form-control bg-color-a color-d p-2 rounded-3 mb-2 mb-md-4" required>
+                        <label class="form-label color-d mb-2" for="company-name-field">Company name</label>
+                        <input type="text" id="company-name-field" placeholder="Enter company name" class="form-control bg-color-a color-d p-2 mb-2 rounded-3 mb-md-4" required>
+                        <label class="form-label color-d mb-2" for="company-site-field">Company site</label>
+                        <input type="text" id="company-site-field" placeholder="Enter the domain of site" class="form-control bg-color-a color-d p-2 mb-2 rounded-3 mb-2 mb-md-4">
+                        <label class="form-label color-d mb-2" for="company-position-field">Position in the company</label>
+                        <select id="company-position-field" class="form-control bg-color-a color-d p-2 mb-2 rounded-3 mb-md-4" required>
+                            <option value="" selected disabled class="color-b">Select your position in company</option>
+                            <option value="Owner" class="color-b">Owner</option>
+                            <option value="CEO" class="color-b">CEO</option>
+                            <option value="CMO" class="color-b">Marketing director</option>
+                            <option value="CTO" class="color-b">Technology director</option>
+                            <option value="Founder" class="color-b">Founder</option>
+                        </select>
+                        <label class="form-label color-d mb-2" for="email-field">Email</label>
+                        <input type="email" id="email-field" placeholder="Enter your email" class="form-control bg-color-a color-d p-2 mb-2 rounded-3 mb-md-4" required>
+                        <label class="form-label color-d mb-2" for="message-field">Message</label>
+                        <textarea id="message-field" placeholder="Enter your message" rows="3" cols="20" class="form-control bg-color-a color-d p-2 mb-2 rounded-3 mb-md-4" required></textarea>
+                    </div>
+                    <div id="form-action" class="d-md-flex justify-content-md-center">
+                        <button type="submit" class="btn-system secondary btn-large">Send</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer class="p-3">
+            <div id="footer-options" class="d-md-flex justify-content-md-between px-md-2 align-items-md-start px-lg-0 justify-content-lg-around">
+                <div id="useful-links" class="mb-3 d-md-flex flex-md-column align-items-md-start">
+                    <h3 class="mb-2 text-capitalize color-e">Useful links</h3>
+                    <nav id="useful-links-nav" class="d-flex flex-column gap-2 align-items-md-start">
+                        <a href="#">Terms of use</a>
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Cookies policy</a>
+                        <a href="#">Licenses</a>
+                    </nav>
+                </div>
+                <div id="support-links" class="mb-3 d-md-flex flex-md-column align-items-md-start">
+                    <h3 class="mb-2 text-capitalize color-e">Support</h3>
+                    <nav id="support-links-nav" class="d-flex flex-column gap-2 align-items-md-start">
+                        <a href="#">
+                            <i class="bi bi-whatsapp me-1"></i>
+                            <span>555−0100</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-telegram me-1"></i>
+                            <span>123−4567</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-envelope-at-fill me-1"></i>
+                            <span>support@borgescompany.com</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-telephone-fill me-1"></i>
+                            <span>(212)555−1234</span>
+                        </a>
+                    </nav>
+                </div>
+                <div id="social-links" class="mb-3 d-md-flex flex-md-column align-items-md-start">
+                    <h3 class="mb-2 text-capitalize color-e">Social</h3>
+                    <nav id="social-links-nav" class="d-flex justify-content-evenly gap-2 align-items-md-start">
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div id="footer-brand" class="mt-5 mt-md-3">
+                <p class="mb-0">Copyright &copy; <a href="#" class="fst-italic">Manassés Ndombele</a></p>
+                <p>Freelancer Developer</p>
+            </div>
+        </footer>
+        <div id="support-team" class="position-fixed bg-color-cb rounded-5 d-none gap-3 align-items-center px-3 py-1">
+            <i class="bi bi-headset color-e"></i>
+            <p class="mb-0 color-a text-capitalize fw-semibold">Can we help you?</p>
+        </div>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modal-confirmation" class="visually-hidden" id="modal-confirmation-btn"></button>
+        <div id="modal-confirmation" class="modal fade" id="modal-confirmation" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-color-a">
+                    <div class="modal-header">
+                        <h5 class="modal-title color-c text-capitalize fw-semibold">So many thanks!</h5>
+                        <button type="button" class="btn-close color-b d-flex align-items-center" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center color-e mb-0"><i class="bi bi-check-circle"></i></p>
+                        <p id="modal-body-description" class="text-center color-d mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/base.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/home.min.js') }}"></script>
+    </body>
+</html>

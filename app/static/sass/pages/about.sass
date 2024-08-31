@@ -1,0 +1,61 @@
+@use "../base/_variables" as *
+@use "../base/_reset"
+@use "../base/_utilities"
+@use "../base/_animations"
+@use "../base/_mixins" as *
+@use "../components/_header"
+@use "../components/_button"
+@use "../components/_link"
+@use "../components/_intro-and-cta"
+@use "../components/_paragraph-description"
+@use "../components/_subtitle"
+@use "../components/_card"
+@use "../components/_footer"
+@use "../components/_support-box"
+
+main
+    #intro-area
+        @include desktop
+            @include introbg('solutions.jpg')
+
+    #CEO-and-founder
+        @include desktop
+            border-radius: 1rem
+            overflow: hidden
+            background-color: $primary-color
+
+        img
+            height: 25rem
+
+            @include tablet
+                width: 40% !important
+                height: 100%
+
+            @include desktop
+                height: 35rem
+                border-radius: 0px !important
+
+        .description-area
+            @include tablet
+                width: 60%
+
+            @include desktop
+                width: 50%
+
+            .subtitle
+                text-align: left
+
+            .description
+                text-align: left
+                margin-bottom: .5rem
+
+            #social
+                a
+                    @include tablet
+                        font-size: 1.25em
+
+                    @include desktop
+                        font-size: 1.3em
+
+                    i
+                        font-size: 1.2em

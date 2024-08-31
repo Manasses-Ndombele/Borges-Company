@@ -1,0 +1,14 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+a
+    color: $quaternary-color
+    text-decoration: none
+
+    &:active,
+    &:focus
+        font-weight: 600
+        color: $tertiary-color
+
+    &:hover
+        color: $secondary-color

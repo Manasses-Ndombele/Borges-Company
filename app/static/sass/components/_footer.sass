@@ -1,0 +1,42 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+footer
+    background-color: $primary-color
+    text-align: center
+
+    #footer-options
+        div
+            h3
+                font: 1.3em $montserrat
+
+                @include tablet
+                    font-size: 1.6em
+
+            nav
+                a
+                    @include tablet
+                        font-size: 1.3em
+
+                &#support-links-nav,
+                &#social-links-nav
+                    a
+                        i
+                            font-size: 1.3em
+
+                            @include tablet
+                                font-size: 1.4em
+
+                &#social-links-nav
+                    a
+                        @include desktop
+                            transition: all .3s ease-in
+
+                            &:hover
+                                transform: translate(-2px, 2px) scale(1.02)
+
+
+    #footer-brand
+        p
+            @include tablet
+                font-size: 1.4em

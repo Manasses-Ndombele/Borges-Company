@@ -1,0 +1,67 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+#intro-area
+    @include desktop
+        position: relative
+        height: 70vh
+
+    @include tv
+        background-attachment: fixed !important
+
+    #intro-img
+        @include desktop
+            position: absolute !important
+            top: 0%
+            left: 0%
+            width: 100%
+            filter: opacity(0.3)
+            background-color: $quaternary-color
+            height: 100%
+
+        img
+            height: 15rem
+            animation: flip-in-diag-1-tr 1s cubic-bezier(0.755, 0.050, 0.855, 0.060) both
+
+            @include tablet
+                height: 25rem
+                animation: scale-up-ver-center 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+    #intro-body
+        @include tablet
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        @include desktop
+            width: 60%
+            align-items: flex-start
+            height: 100%
+            justify-content: space-evenly
+
+        h1
+            font-family: $montserrat
+            animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+
+            @include tablet
+                font-size: 2.2em
+
+            @include desktop
+                text-align: left !important
+                text-shadow: 0px 0px 2px $quaternary-color
+
+        p
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+
+            @include tablet
+                width: 80%
+
+            @include desktop
+                text-align: left
+                color: $primary-color
+
+        #intro-overlay-actions
+            @include desktop
+                position: relative
+                justify-content: space-between !important
+                width: 70% !important

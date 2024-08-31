@@ -1,0 +1,102 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+#main-header
+    padding: 2rem .6rem .8rem .6rem
+
+    #header-brand
+        @include desktop
+            cursor: pointer
+
+        #logo
+            width: 4rem
+            height: 4rem
+            border: 2px solid $quinary-color
+
+            @include tablet
+                width: 5rem
+                height: 5rem
+                border-width: 3px
+
+        #header-brand-legend
+            strong
+                font: bold 1.8em $montserrat
+                letter-spacing: -2px
+
+                @include tablet
+                    font-size: 2.2em
+
+            span
+                font-family: $montserrat
+                font-variant-caps: small-caps
+                letter-spacing: .3rem
+
+                @include tablet
+                    font-size: 1.4em
+
+    #open-menu-btn
+        i
+            font-size: 3em
+
+            @include tablet
+                font-size: 3.5em
+
+    #menu-overlay
+        left: 0%
+        z-index: 1
+        transition: all 1s ease-in
+
+        @include desktop
+            position: static !important
+            width: 60% !important
+            height: min-content !important
+            opacity: 1 !important
+
+        &.closed
+            bottom: 100%
+            opacity: 0
+
+        &.opened
+            bottom: 0%
+            opacity: 1
+
+        #close-menu-btn
+            i
+                font-size: 3em
+
+        #main-menu
+            p
+                font: 2em $montserrat
+
+                @include tablet
+                    font-size: 2.4em
+
+            nav
+                @include desktop
+                    background-color: $primary-color
+
+                a
+                    font: 1.3em $montserrat
+                    @include desktop
+                        cursor: pointer
+                        &::after
+                            content: ""
+                            display: block
+                            width: 0%
+                            height: 3px
+                            background-color: $tertiary-color-x
+                            margin-top: .2rem
+                            transition: all .4s ease-in
+
+                        &.active::after
+                            width: 100%
+
+                        &:hover::after
+                            width: 100%  
+
+                    @include tablet
+                        font-size: 1.6em
+
+                    &.active
+                        font-weight: bold
+                        color: $tertiary-color-x

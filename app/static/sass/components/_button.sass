@@ -1,0 +1,92 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+button
+    &.btn-system
+        color: $primary-color-x
+        font: 600 .9em $poppins-b
+        padding: .8rem
+        border-radius: 2rem
+        transition: background-color .3s linear, color .5s ease-in, transform .2s ease-out
+
+        @include tablet     
+            width: min-content !important
+            white-space: nowrap
+            font-size: 1.3em
+            padding: 1rem 1.5rem 1rem 1.5rem
+
+    &.btn-system.primary
+        background-color: $tertiary-color-x
+        border: 1px solid $tertiary-color-x
+
+        @include tablet
+            border-width: 3px
+
+        &:active,
+        &:focus
+            background-color: transparent
+            color: $tertiary-color-x
+            transform: scale(1.05)
+
+        @include desktop
+            &:hover
+                background-color: transparent
+                color: $tertiary-color-x
+
+            &:active,
+            &:focus
+                transform: scale(1.05)
+
+    &.btn-system.secondary
+        background-color: $quinary-color
+        border: 1px solid $quinary-color
+
+        @include tablet
+            border-width: 3px
+
+        &:active,
+        &:focus
+            background-color: transparent
+            color: $quinary-color
+            transform: scale(1.05)
+
+        @include desktop
+            &:hover
+                background-color: transparent
+                color: $quinary-color
+
+            &:active,
+            &:focus
+                transform: scale(1.05)
+
+    &.btn-icon
+        background-color: transparent
+        border: none
+
+    &.btn-large
+        width: 100%
+        display: block
+        margin-bottom: .6rem
+
+    &.btn-system.outline
+        background-color: transparent
+        border: 1px solid $quinary-color
+        color: $quinary-color
+
+        @include tablet
+            border-width: 3px
+
+        &:active,
+        &:focus
+            background-color: $quinary-color
+            color: $primary-color-x
+            transform: scale(1.05)
+
+        @include desktop
+            &:hover
+                background-color: $quinary-color
+                color: $primary-color-x
+
+            &:active,
+            &:focus
+                transform: scale(1.05)

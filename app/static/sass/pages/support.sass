@@ -1,0 +1,62 @@
+@use "../base/_variables" as *
+@use "../base/_reset"
+@use "../base/_utilities"
+@use "../base/_mixins" as *
+@use "../base/_animations"
+@use "../components/_header"
+@use "../components/_button"
+@use "../components/_link"
+@use "../components/_intro-and-cta"
+@use "../components/_paragraph-description"
+@use "../components/_subtitle"
+@use "../components/_form"
+@use "../components/_footer"
+@use "../components/_support-box"
+@use "../components/_modal"
+
+main
+    #intro-area
+        @include desktop
+            @include introbg('support.jpg')
+
+    #contacts-area
+        h2
+            @include tablet
+                text-align: left
+
+            @include desktop
+                text-align: center
+
+        #contacts
+            a
+                i
+                    font-size: 1.2em
+
+                    @include tablet
+                        font-size: 1.4em
+
+                span
+                    font-size: 1.1em
+
+                    @include tablet
+                        font-size: 1.3em
+
+    .social-links
+        .subtitle
+            margin-bottom: 1.5rem
+
+            @include tablet
+                text-align: left
+
+        .social-links-nav
+            @include tablet
+                width: 50%
+
+            a
+                font-size: 2em
+
+                @include desktop
+                    transition: all .3s ease-in
+
+                    &:hover
+                        transform: translate(2px, -2px) scale(1.02)

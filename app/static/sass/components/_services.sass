@@ -1,0 +1,47 @@
+@use "../base/_variables" as *
+@use "../base/_mixins" as *
+
+#services
+    h2
+        margin: 1rem 0rem
+
+    #bonus-area
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        gap: 2rem
+
+        @include tablet
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-around
+
+        @include desktop
+            flex-wrap: nowrap
+            gap: 0rem
+            justify-content: space-between
+
+        @include tv
+            justify-content: space-around
+
+        .bonus
+            @include tablet
+                text-align: center
+
+            i
+                font-size: 2em
+                color: $quaternary-color
+
+                @include tablet
+                    font-size: 2.7em
+
+            h3
+                font-family: $montserrat
+                font-weight: 500
+                margin-top: .5rem
+                text-transform: uppercase
+                letter-spacing: .2rem
+                color: $quaternary-color
+
+                @include tablet
+                    font-size: 1.9em
