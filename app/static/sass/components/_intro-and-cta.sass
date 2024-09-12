@@ -15,17 +15,15 @@
             top: 0%
             left: 0%
             width: 100%
-            filter: opacity(0.3)
-            background-color: $quaternary-color
+            -webkit-backdrop-filter: brightness(0.7)
+            backdrop-filter: brightness(0.7)
             height: 100%
 
         img
             height: 15rem
-            animation: flip-in-diag-1-tr 1s cubic-bezier(0.755, 0.050, 0.855, 0.060) both
 
             @include tablet
                 height: 25rem
-                animation: scale-up-ver-center 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
 
     #intro-body
         @include tablet
@@ -41,7 +39,7 @@
 
         h1
             font-family: $montserrat
-            animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both
+            z-index: 1 !important
 
             @include tablet
                 font-size: 2.2em
@@ -51,7 +49,7 @@
                 text-shadow: 0px 0px 2px $quaternary-color
 
         p
-            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both
+            z-index: 1 !important
 
             @include tablet
                 width: 80%
