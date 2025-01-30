@@ -4,7 +4,7 @@
 
 **Borges Company** é um projeto com objetivo de exemplificar um site instituicional de uma agência de marketing, pretendo demonstrar minhas habilidades criativas de frontend, neste projeto de 5 páginas cada uma delas foi pensada ao estilo moderno dos sites instituicionais.
 
-Link do site: [Borges Company](https://borges-company-01gv.onrender.com/solutions/)
+Link do site: [Borges Company](https://borges-company-1c97.onrender.com/)
 
 **Homepage do site:**
 
@@ -40,7 +40,7 @@ Instale o Python na sua máquina: [Python](https://www.python.org/)
 ```
 pip install -r requirements.txt
 
-python manage.py runserver
+python run.py
 ```
 
 Acesse o projeto em seu navegador no endereço que aparecer no terminal
